@@ -52,6 +52,7 @@ namespace cloudscribe.Core.Web.ViewModels.Account
         // not that we can be sure they are telling the truth about anything
         
         //[Required(ErrorMessage = "Display name  is required")]
+        [StringLength(100, ErrorMessage = "Display name has a maximum length of 100 characters")]
         public string DisplayName { get; set; } = string.Empty;
         
         [StringLength(100, ErrorMessage = "First name has a maximum length of 100 characters")]
