@@ -557,7 +557,7 @@ namespace cloudscribe.Core.Web.Controllers.Mvc
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public virtual async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = null)
+        public virtual async Task<IActionResult> Register([Bind("Email,Password,ConfirmPassword,Username,DisplayName,FirstName,LastName,DateOfBirth,AgreeToTerms")] RegisterViewModel model, string returnUrl = null)
         {
             ViewData["Title"] = StringLocalizer["Register"];
             ViewData["ReturnUrl"] = returnUrl;
